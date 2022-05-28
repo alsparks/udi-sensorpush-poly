@@ -10,7 +10,7 @@ import udi_interface
 import sys
 import time
 from pysensorpush import PySensorPush
-from nodes import SensorNode
+from nodes import sensor
 
 
 LOGGER = udi_interface.LOGGER
@@ -121,7 +121,7 @@ class Controller(udi_interface.Node):
             address = values['deviceId']
             title = values['name']
             try:
-                node = SensorNode(self.poly, self.address, address, title)
+                node = sensor.SensorNode(self.poly, self.address, address, title)
                 self.poly.addNode(node)
                 self.wait_for_node_done()
                 self.nodes[address] = node
