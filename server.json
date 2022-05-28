@@ -1,6 +1,6 @@
 {
   "name": "SensorPush",
-  "docs": "https://github.com/UniversalDevicesInc-PG3/sensorpush-poly",
+  "docs": "https://github.com/alsparks/udi-sensorpush-poly",
   "type": "python3",
   "executable": "main.py",
   "install": "install.sh",
@@ -18,8 +18,8 @@
       "author": "Alan Sparks (asparks@doublesparks.net)",
       "version": "0.1.0",
       "date": "May 28, 2022",
-      "source": "https://github.com/UniversalDevicesInc-PG3/sensorpush-poly",
-      "license": "https://raw.githubusercontent.com/UniversalDevicesInc-PG3/udi-blue-iris-poly/master/LICENSE"
+      "source": "https://github.com/alsparks/udi-sensorpush-poly",
+      "license": "https://github.com/alsparks/udi-sensorpush-poly/master/LICENSE"
     }
   ],
   "store": {
