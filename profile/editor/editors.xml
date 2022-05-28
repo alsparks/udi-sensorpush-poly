@@ -1,0 +1,17 @@
+<editors>
+    <editor id="bool">
+        <range uom="2" subset="0,1"/>
+    </editor>
+    <editor id="temp_f">
+      <range uom="56" min="0" max="200"/>
+    </editor>
+    <editor id="humidity_r">
+      <range uom="56" min="0" max="65535"/>
+    </editor>
+    <editor id="battery">
+      <range uom="72" />
+    </editor>
+    <editor id="rssi">
+      <range uom="131" />
+    </editor>
+</editors>

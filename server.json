@@ -1,0 +1,34 @@
+{
+  "name": "SensorPush",
+  "docs": "https://github.com/UniversalDevicesInc-PG3/sensorpush-poly",
+  "type": "python3",
+  "executable": "main.py",
+  "install": "install.sh",
+  "description": "SensorPush UDI ISY Polyglot v3 Node Server",
+  "shortPoll": "60",
+  "longPoll": "60",
+  "logLevel": "DEBUG",
+  "customParams": {
+	  "user": "",
+	  "password": ""
+  },
+  "credits": [
+    {
+      "title": "SensorPush",
+      "author": "Alan Sparks (asparks@doublesparks.net)",
+      "version": "0.1.0",
+      "date": "May 28, 2022",
+      "source": "https://github.com/UniversalDevicesInc-PG3/sensorpush-poly",
+      "license": "https://raw.githubusercontent.com/UniversalDevicesInc-PG3/udi-blue-iris-poly/master/LICENSE"
+    }
+  ],
+  "store": {
+	  "developer": "asparks@doublesparks.net",
+	  "purchaseOptions": [
+		  {
+			  "isPerpetual": true,
+			  "price": 0
+		  }
+	  ]
+  }
+}

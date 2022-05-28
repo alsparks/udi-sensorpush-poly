@@ -1,0 +1,10 @@
+# controller
+ND-ctl-NAME = SensorPush Sensors
+ND-ctl-ICON = GenericCtl
+CMD-ctl-Query-NAME = Query
+ST-ctl-GV1-NAME = Server Status
+
+# Nodes:
+ND-sensor-NAME = Sensor
+ND-sensor-ICON = GenericCtl
+
