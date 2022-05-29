@@ -44,7 +44,7 @@ class Controller(udi_interface.Node):
         # start processing events and create add our controller node
         polyglot.ready()
         self.poly.addNode(self)
-        node.setDriver('ST', True, True, True)
+        self.setDriver('ST', True, True, True)
 
     '''
     node_queue() and wait_for_node_event() create a simple way to wait
@@ -138,6 +138,8 @@ class Controller(udi_interface.Node):
             LOGGER.info('SensorPush starting poll')
             samples = self.spapi.samples()
             sensors = self.spapi.sensors
+            self.setDriver('ST', True, True, True)
+
             for sensorid, values in samples['sensors'].items():
                 LOGGER.info('SensorPush sensorid {}'.format(sensorid))
                 deviceid = sensorid.split('.')[0]
