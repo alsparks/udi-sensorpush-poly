@@ -148,10 +148,10 @@ class Controller(udi_interface.Node):
                 humidity = values[0]['humidity']
 
                 node = self.nodes[deviceid]
-                node.setDriver('ST', temperature, False, False)
-                node.setDriver('GV1', humidity, False, False)
-                node.setDriver('GV2', battery, False, False)
-                node.setDriver('GV3', rssi, False, False)
+                node.setDriver('GV1', temperature, True, True)
+                node.setDriver('GV2', humidity, True, True)
+                node.setDriver('GV3', battery, True, True)
+                node.setDriver('GV4', rssi, True, True)
 
 
     '''
