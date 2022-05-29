@@ -18,10 +18,10 @@ class SensorNode(udi_interface.Node):
     id='sensor'
     drivers = [
         {'driver': 'ST', 'value': 1, 'uom': 2},
-        {'driver': 'GV1', 'value': 0, 'uom': 17},
-        {'driver': 'GV2', 'value':0, 'uom': 22},
-        {'driver': 'GV3', 'value':0, 'uom': 72},
-        {'driver': 'GV4', 'value':0, 'uom': 131},
+        {'driver': 'GV0', 'value': 0, 'uom': 17},
+        {'driver': 'GV1', 'value':0, 'uom': 22},
+        {'driver': 'GV2', 'value':0, 'uom': 72},
+        {'driver': 'GV3', 'value':0, 'uom': 131},
     ]
 
 

@@ -2,9 +2,15 @@
 ND-ctl-NAME = SensorPush Sensors
 ND-ctl-ICON = GenericCtl
 CMD-ctl-Query-NAME = Query
-ST-ctl-GV1-NAME = Server Status
+ST-ctl-ST-NAME = Online
 
 # Nodes:
 ND-sensor-NAME = Sensor
 ND-sensor-ICON = GenericCtl
+ST-sensor-ST-NAME = Active
+ST-sensor-GV0-NAME = Temperature
+ST-sensor-GV1-NAME = Humidity
+ST-sensor-GV2-NAME = Battery
+ST-sensor-GV3-NAME = RSSI
+
 

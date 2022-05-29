@@ -141,6 +141,7 @@ class Controller(udi_interface.Node):
                 LOGGER.info('SensorPush sensorid {}'.format(sensorid))
                 deviceid = sensorid.split('.')[0]
                 battery = sensors[sensorid]['battery_voltage']
+                active = sensors[sensorid]['active']
                 name = sensors[sensorid]['name']
                 rssi = sensors[sensorid]['rssi']
                 type = sensors[sensorid]['type']
@@ -148,10 +149,11 @@ class Controller(udi_interface.Node):
                 humidity = values[0]['humidity']
 
                 node = self.nodes[deviceid]
-                node.setDriver('GV1', temperature, True, True)
-                node.setDriver('GV2', humidity, True, True)
-                node.setDriver('GV3', battery, True, True)
-                node.setDriver('GV4', rssi, True, True)
+                node.setDriver('ST', active, False, False)
+                node.setDriver('GV0', temperature, False, False)
+                node.setDriver('GV1', humidity, False, False)
+                node.setDriver('GV2', battery, False, False)
+                node.setDriver('GV4', rssi, False, False)
 
 
     '''
