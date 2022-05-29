@@ -1,21 +1,14 @@
 <nodeDefs>
-    <!-- NODE DEF from 5.0 document http://wiki.universal-devices.com/index.php?title=V50_MAIN -->
     <!-- controller -->
     <nodeDef id="controller" nls="ctl">
-        <editors />
         <sts>
           <st id="ST" editor="bool" />
         </sts>
         <cmds>
-            <sends />
-            <accepts>
-              <cmd id="QUERY" />
-            </accepts>
         </cmds>
     </nodeDef>
 
-    <nodeDef id="sensor" nls="sensor">
-        <editors />
+    <nodeDef id="SPsensor" nls="sensor">
         <sts>
           <st id="ST" editor="bool" />
           <st id="GV0" editor="temp_f" />
@@ -23,12 +16,7 @@
           <st id="GV2" editor="battery" />
           <st id="GV3" editor="rssi" />
         </sts>
-        <cmds>
-            <sends />
-            <accepts>
-              <cmd id="QUERY" />
-            </accepts>
-        </cmds>
+        <cmds />
     </nodeDef>
 
 </nodeDefs>

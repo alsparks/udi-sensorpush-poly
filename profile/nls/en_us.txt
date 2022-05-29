@@ -1,16 +1,14 @@
 # controller
-ND-ctl-NAME = SensorPush Sensors
-ND-ctl-ICON = GenericCtl
-CMD-ctl-Query-NAME = Query
-ST-ctl-ST-NAME = Online
+ND-controller-NAME = SensorPush Sensors
+ND-controller-ICON = GenericCtl
+ST-ctl-ST-NAME = NodeServer Online
 
 # Nodes:
-ND-sensor-NAME = Sensor
-ND-sensor-ICON = GenericCtl
+ND-SPsensor-NAME = Sensor
+ND-SPsensor-ICON = GenericCtl
 ST-sensor-ST-NAME = Active
 ST-sensor-GV0-NAME = Temperature
 ST-sensor-GV1-NAME = Humidity
 ST-sensor-GV2-NAME = Battery
 ST-sensor-GV3-NAME = RSSI
-
 
