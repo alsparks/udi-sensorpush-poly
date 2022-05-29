@@ -21,9 +21,9 @@ Controller is interfacing with both Polyglot and the device.
 '''
 class Controller(udi_interface.Node):
     id = 'ctl'
-    drivers = [
-            {'driver': 'ST', 'value': 1, 'uom': 2},
-            ]
+    drivers = [{'driver': 'ST', 'value': 1, 'uom': 2}, #Polyglot connection status
+                ]
+
 
     def __init__(self, polyglot, parent, address, name):
         super(Controller, self).__init__(polyglot, parent, address, name)
@@ -134,8 +134,8 @@ class Controller(udi_interface.Node):
     def poll(self, polltype):
         if 'shortPoll' in polltype:
             LOGGER.info('SensorPush starting poll')
-            samples = sp.samples()
-            sensors = sp.sensors
+            samples = self.spapi.samples()
+            sensors = self.spapi.sensors
             for sensorid, values in samples['sensors'].items():
                 LOGGER.info('SensorPush sensorid {}'.format(sensorid))
                 deviceid = sensorid.split('.')[0]
