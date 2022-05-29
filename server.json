@@ -16,7 +16,7 @@
     {
       "title": "SensorPush",
       "author": "Alan Sparks (asparks@doublesparks.net)",
-      "version": "0.1.10",
+      "version": "0.1.11",
       "date": "May 28, 2022",
       "source": "https://github.com/alsparks/udi-sensorpush-poly",
       "license": "https://github.com/alsparks/udi-sensorpush-poly/master/LICENSE"

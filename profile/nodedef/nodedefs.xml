@@ -18,10 +18,10 @@
         <editors />
         <sts>
           <st id="ST" editor="bool" />
-          <st id="GV1" editor="temp_f" />
-          <st id="GV2" editor="humidity_r" />
-          <st id="GV3" editor="battery" />
-          <st id="GV4" editor="rssi" />
+          <st id="GV0" editor="temp_f" />
+          <st id="GV1" editor="humidity_r" />
+          <st id="GV2" editor="battery" />
+          <st id="GV3" editor="rssi" />
         </sts>
         <cmds>
             <sends />
