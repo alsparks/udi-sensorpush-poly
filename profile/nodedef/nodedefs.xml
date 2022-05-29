@@ -1,6 +1,6 @@
 <nodeDefs>
     <!-- controller -->
-    <nodeDef id="controller" nls="ctl">
+    <nodeDef id="controller" nls="controller">
         <sts>
           <st id="ST" editor="bool" />
         </sts>
@@ -8,7 +8,7 @@
         </cmds>
     </nodeDef>
 
-    <nodeDef id="SPsensor" nls="sensor">
+    <nodeDef id="sensor" nls="sensor">
         <sts>
           <st id="ST" editor="bool" />
           <st id="GV0" editor="temp_f" />

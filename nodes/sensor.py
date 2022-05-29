@@ -15,7 +15,7 @@ Custom = udi_interface.Custom
 This is our device node.
 '''
 class SensorNode(udi_interface.Node):
-    id='SPsensor'
+    id='sensor'
     drivers = [
         {'driver': 'ST', 'value': 1, 'uom': 2},
         {'driver': 'GV0', 'value': 0, 'uom': 17},

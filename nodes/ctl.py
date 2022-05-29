@@ -20,7 +20,7 @@ Custom = udi_interface.Custom
 Controller is interfacing with both Polyglot and the device.
 '''
 class Controller(udi_interface.Node):
-    id = 'ctl'
+    id = 'controller'
     drivers = [
         {'driver': 'ST', 'value': 1, 'uom': 2},
     ]
