@@ -113,7 +113,7 @@ class Controller(udi_interface.Node):
     '''
     def createChildren(self):
         LOGGER.info('Login to Sensorpush')
-        self.spapi = PySensorPush(self.username, self.password)
+        self.spapi = PySensorPush(self.user, self.password)
         sensors = self.spapi.sensors
 
         self.nodes = {}
