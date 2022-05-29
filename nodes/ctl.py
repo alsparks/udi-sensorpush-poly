@@ -44,7 +44,7 @@ class Controller(udi_interface.Node):
         # start processing events and create add our controller node
         polyglot.ready()
         self.poly.addNode(self)
-        self.setDriver('ST', True, True, True)
+        self.setDriver('ST', True)
 
     '''
     node_queue() and wait_for_node_event() create a simple way to wait
@@ -138,10 +138,11 @@ class Controller(udi_interface.Node):
             LOGGER.info('SensorPush starting poll')
             samples = self.spapi.samples()
             sensors = self.spapi.sensors
-            self.setDriver('ST', True, True, True)
+            self.setDriver('ST', True)
 
             for sensorid, values in samples['sensors'].items():
                 LOGGER.info('SensorPush sensorid {}'.format(sensorid))
+                LOGGER.debug('SensorPush data {}'.format(values))
                 deviceid = sensorid.split('.')[0]
                 battery = sensors[sensorid]['battery_voltage']
                 active = sensors[sensorid]['active']
@@ -152,11 +153,11 @@ class Controller(udi_interface.Node):
                 humidity = values[0]['humidity']
 
                 node = self.nodes[deviceid]
-                node.setDriver('ST', active, True, False)
-                node.setDriver('GV0', temperature, True, False)
-                node.setDriver('GV1', humidity, True, False)
-                node.setDriver('GV2', battery, True, False)
-                node.setDriver('GV3', rssi, True, False)
+                node.setDriver('ST', active)
+                node.setDriver('GV0', temperature)
+                node.setDriver('GV1', humidity)
+                node.setDriver('GV2', battery)
+                node.setDriver('GV3', rssi)
 
 
     '''
