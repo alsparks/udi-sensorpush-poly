@@ -16,11 +16,12 @@ This is our device node.
 '''
 class SensorNode(udi_interface.Node):
     id='sensor'
-    drivers = [{'driver': 'ST', 'value': 1, 'uom': 56}, #Polyglot connection status
-                {'driver': 'GV1', 'value': 0, 'uom': 565}, #Blue Iris Server Status (0=red, 1=green, 2=yellow, 3=disconnected)
-                {'driver': 'GV2', 'value':0, 'uom': 72} #Blue Iris Profile
-                {'driver': 'GV3', 'value':0, 'uom': 131} #Blue Iris Profile
-                ]
+    drivers = [
+        {'driver': 'ST', 'value': 1, 'uom': 56},
+        {'driver': 'GV1', 'value': 0, 'uom': 56},
+        {'driver': 'GV2', 'value':0, 'uom': 72},
+        {'driver': 'GV3', 'value':0, 'uom': 131},
+    ]
 
 
     def __init__(self, polyglot, parent, address, name):
