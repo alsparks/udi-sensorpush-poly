@@ -27,7 +27,7 @@ class ControllerNode(udi_interface.Node):
 
 
     def __init__(self, polyglot, parent, address, name):
-        super(Controller, self).__init__(polyglot, parent, address, name)
+        super(ControllerNode, self).__init__(polyglot, parent, address, name)
 
         self.poly = polyglot
         self.n_queue = []
@@ -86,7 +86,7 @@ class ControllerNode(udi_interface.Node):
                 if self.connect():
                     self.discover()
         except Exception as ex:
-            LOGGER.error('Error starting Blue Iris NodeServer: %s', str(ex))
+            LOGGER.error('Error starting SensorPush NodeServer: %s', str(ex))
 
         self.createChildren()
 
