@@ -3,15 +3,15 @@
         <range uom="2" subset="0,1"/>
     </editor>
     <editor id="temp_f">
-      <range uom="17" min="0" max="200"/>
+      <range uom="17" min="-40" max="140"/>
     </editor>
     <editor id="humidity_r">
-      <range uom="22" min="0" max="65535"/>
+      <range uom="22" min="0" max="100"/>
     </editor>
     <editor id="battery">
-      <range uom="72" />
+      <range uom="72" min="0" max="5"/>
     </editor>
     <editor id="rssi">
-      <range uom="131" />
+      <range uom="131" min="-100" max="0"/>
     </editor>
 </editors>

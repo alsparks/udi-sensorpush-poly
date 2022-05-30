@@ -18,7 +18,7 @@ if __name__ == "__main__":
         polyglot.start()
 
         # Create the controller node
-        ctl.Controller(polyglot, 'controller', 'controller', 'SensorPushNodeServer')
+        ctl.ControllerNode(polyglot, 'controller', 'controller', 'SensorPushNodeServer')
 
         # Just sit and wait for events
         polyglot.runForever()
