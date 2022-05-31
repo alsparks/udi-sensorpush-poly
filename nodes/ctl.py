@@ -22,7 +22,7 @@ Controller is interfacing with both Polyglot and the device.
 class ControllerNode(udi_interface.Node):
     id = 'controller'
     drivers = [
-        {'driver': 'ST', 'value': 1, 'uom': 2},
+        {'driver': 'ST', 'value': True, 'uom': 2},
     ]
 
 
@@ -153,7 +153,7 @@ class ControllerNode(udi_interface.Node):
                 humidity = values[0]['humidity']
 
                 node = self.nodes[deviceid]
-                node.setDriver('ST', active)
+                node.setDriver('ST', active, True, True)
                 node.setDriver('GV0', temperature)
                 node.setDriver('GV1', humidity)
                 node.setDriver('GV2', battery)
