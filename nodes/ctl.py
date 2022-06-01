@@ -22,7 +22,7 @@ Controller is interfacing with both Polyglot and the device.
 class ControllerNode(udi_interface.Node):
     id = 'controller'
     drivers = [
-        {'driver': 'ST', 'value': True, 'uom': 2},
+        {'driver': 'ST', 'value': 1, 'uom': 2},
     ]
 
 
@@ -44,7 +44,7 @@ class ControllerNode(udi_interface.Node):
         # start processing events and create add our controller node
         polyglot.ready()
         self.poly.addNode(self)
-        self.setDriver('ST', True)
+        self.setDriver('ST', 1)
 
     '''
     node_queue() and wait_for_node_event() create a simple way to wait
@@ -138,7 +138,7 @@ class ControllerNode(udi_interface.Node):
             LOGGER.info('SensorPush starting poll')
             samples = self.spapi.samples()
             sensors = self.spapi.sensors
-            self.setDriver('ST', True)
+            self.setDriver('ST', 1)
 
             for sensorid, values in samples['sensors'].items():
                 LOGGER.info('SensorPush sensorid {}'.format(sensorid))
@@ -153,7 +153,7 @@ class ControllerNode(udi_interface.Node):
                 humidity = values[0]['humidity']
 
                 node = self.nodes[deviceid]
-                node.setDriver('ST', active, True, True)
+                node.setDriver('ST', 1 if active else 0)
                 node.setDriver('GV0', temperature)
                 node.setDriver('GV1', humidity)
                 node.setDriver('GV2', battery)
@@ -168,7 +168,7 @@ class ControllerNode(udi_interface.Node):
         nodes = self.poly.getNodes()
         for node in nodes:
             if node != 'controller':   # but not the controller node
-                nodes[node].setDriver('ST', False, True, True)
+                nodes[node].setDriver('ST', 0, True, True)
 
         self.poly.stop()
 
