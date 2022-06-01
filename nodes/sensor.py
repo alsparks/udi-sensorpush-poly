@@ -22,6 +22,7 @@ class SensorNode(udi_interface.Node):
         {'driver': 'GV1', 'value':0, 'uom': 22},
         {'driver': 'GV2', 'value':0, 'uom': 72},
         {'driver': 'GV3', 'value':0, 'uom': 131},
+        {'driver': 'GV4', 'value':0, 'uom': 25},
     ]
 
 

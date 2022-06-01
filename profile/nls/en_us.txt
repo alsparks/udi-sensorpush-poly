@@ -6,9 +6,14 @@ ST-controller-ST-NAME = NodeServer Online
 # Nodes:
 ND-sensor-NAME = Sensor
 ND-sensor-ICON = GenericCtl
-ST-sensor-ST-NAME = Active
+ST-sensor-ST-NAME = Sensor Active
 ST-sensor-GV0-NAME = Temperature
 ST-sensor-GV1-NAME = Humidity
 ST-sensor-GV2-NAME = Battery
 ST-sensor-GV3-NAME = RSSI
+ST-sensor-GV4-NAME = Sensor Model
+
+SENSOR_MODEL-0 = Unknown
+SENSOR_MODEL-1 = HT1
+SENSOR_MODEL-2 = HTP.xw
 

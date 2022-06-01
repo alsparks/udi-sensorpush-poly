@@ -14,4 +14,7 @@
     <editor id="rssi">
       <range uom="131" min="-100" max="0"/>
     </editor>
+    <editor id="model">
+      <range uom="25" subset="0-2" nls="SENSOR_MODEL" />
+    </editor>
 </editors>

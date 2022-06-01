@@ -107,6 +107,11 @@ class ControllerNode(udi_interface.Node):
         LOGGER.info('Started SensorPush NodeServer for v3 NodeServer')
 
 
+    MODELS = {
+        'HT1'    : 1,
+        'HTP.xw' : 2,
+    }
+
     '''
     Create the children nodes.  Since this will be called anytime the
     user changes the number of nodes and the new number may be less
@@ -128,6 +133,11 @@ class ControllerNode(udi_interface.Node):
                 self.poly.addNode(node)
                 self.wait_for_node_done()
                 self.nodes[address] = node
+
+                type = sensors[sensorid]['type']
+                LOGGER.debug('Sensor address {} model {}'.format(address,type))
+                if type in MODELS:
+                    node.setDriver('GV4', MODELS[type])
             except Exception as e:
                 LOGGER.error('Failed to create {}: {}'.format(title, e))
 
@@ -148,7 +158,6 @@ class ControllerNode(udi_interface.Node):
                 active = sensors[sensorid]['active']
                 name = sensors[sensorid]['name']
                 rssi = sensors[sensorid]['rssi']
-                type = sensors[sensorid]['type']
                 temperature = values[0]['temperature']
                 humidity = values[0]['humidity']
 

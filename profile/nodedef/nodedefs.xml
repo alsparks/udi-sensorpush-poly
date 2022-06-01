@@ -15,6 +15,7 @@
           <st id="GV1" editor="humidity_r" />
           <st id="GV2" editor="battery" />
           <st id="GV3" editor="rssi" />
+          <st id="GV4" editor="model" />
         </sts>
         <cmds />
     </nodeDef>
