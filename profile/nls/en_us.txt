@@ -16,4 +16,5 @@ ST-sensor-GV4-NAME = Sensor Model
 SENSOR_MODEL-0 = Unknown
 SENSOR_MODEL-1 = HT1
 SENSOR_MODEL-2 = HTP.xw
+SENSOR_MODEL-3 = HT.w
 

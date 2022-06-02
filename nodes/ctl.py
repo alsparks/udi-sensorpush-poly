@@ -118,6 +118,7 @@ class ControllerNode(udi_interface.Node):
         MODELS = {
             'HT1'    : 1,
             'HTP.xw' : 2,
+            'HT.w'   : 3,
         }
 
         LOGGER.info('Login to Sensorpush')
