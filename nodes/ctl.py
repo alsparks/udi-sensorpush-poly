@@ -137,7 +137,7 @@ class ControllerNode(udi_interface.Node):
                 self.nodes[address] = node
 
                 if type in MODELS:
-                    node.setDriver('GV4', MODELS[type])
+                    node.setDriver('GV4', MODELS[type], True, True)
             except Exception as e:
                 LOGGER.error('Failed to create {}: {}'.format(title, e))
 
