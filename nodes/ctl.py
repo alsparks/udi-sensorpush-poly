@@ -107,11 +107,6 @@ class ControllerNode(udi_interface.Node):
         LOGGER.info('Started SensorPush NodeServer for v3 NodeServer')
 
 
-    MODELS = {
-        'HT1'    : 1,
-        'HTP.xw' : 2,
-    }
-
     '''
     Create the children nodes.  Since this will be called anytime the
     user changes the number of nodes and the new number may be less
@@ -120,6 +115,11 @@ class ControllerNode(udi_interface.Node):
     delete any existing nodes then create the number requested.
     '''
     def createChildren(self):
+        MODELS = {
+            'HT1'    : 1,
+            'HTP.xw' : 2,
+        }
+
         LOGGER.info('Login to Sensorpush')
         self.spapi = PySensorPush(self.user, self.password)
         sensors = self.spapi.sensors
@@ -128,14 +128,14 @@ class ControllerNode(udi_interface.Node):
         for sensorid, values in sensors.items():
             address = values['deviceId']
             title = values['name']
+            type = values['type']
+            LOGGER.debug('Sensor address {} model {}'.format(address,type))
             try:
                 node = sensor.SensorNode(self.poly, self.address, address, title)
                 self.poly.addNode(node)
                 self.wait_for_node_done()
                 self.nodes[address] = node
 
-                type = sensors[sensorid]['type']
-                LOGGER.debug('Sensor address {} model {}'.format(address,type))
                 if type in MODELS:
                     node.setDriver('GV4', MODELS[type])
             except Exception as e:
