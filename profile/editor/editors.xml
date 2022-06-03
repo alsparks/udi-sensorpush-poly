@@ -3,10 +3,10 @@
         <range uom="2" subset="0,1"/>
     </editor>
     <editor id="temp_f">
-      <range uom="17" min="-40" max="140"/>
+      <range uom="17" min="-40" max="140" step="0.1" prec="1"/>
     </editor>
     <editor id="humidity_r">
-      <range uom="22" min="0" max="100"/>
+      <range uom="22" min="0" max="100" step="0.1" prec="1"/>
     </editor>
     <editor id="battery">
       <range uom="72" min="0.0" max="5.0" step="0.1" prec="1"/>
